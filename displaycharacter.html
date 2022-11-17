@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script type="text/javascript">
+		function count(){
+			var number Of Characters=25;
+			var msg=document.getElementById("msg").value
+			console.log(msg.length)
+			document.getElementById("show Count").innerHTML=number Of Characters-msg.length
+		}
+	</script>
+
+</head>
+<body>
+	<textarea id="msg"onkeyup="count()"></textarea>
+	<p>number Of characters
+		<span id="show Count">25</span>
+	</p>
+
+</body>
+</html>

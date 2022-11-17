@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<input id="user"/>
+	<p id="how">how are u</p>
+	<p>thanks</p>
+	<button on onclick="save()">submit</button>
+	<script type="text/javascript">
+		function save(){
+			var para=document.getElementById("how").innerHTML
+			var user=document.getElementById("user").value
+			console.log(para);
+			console.log(user)
+		}
+	</script>
+</body>
+</html>
