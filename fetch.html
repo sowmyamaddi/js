@@ -1,0 +1,62 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		   const promiseObj=new Promise ((resolve,reject)=>{
+			var time=Math.random();
+			console.log(time)
+			if(time<0.5){
+				return resolve("data is available")
+			}
+			else{
+				return reject("data is not available")
+			}
+		})
+		console.log(promiseObj)
+		console.log("hiiii")
+	</script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<section id="emp" style="display:flex"> 
+		
+	</section>
+	<script type="text/javascript">
+		fetch("https://reqres.in/api/users?page=2")
+		.then((req)=>{
+			console.log(req)
+			return req.json()
+		})
+		.then((jsonReq)=>{
+			console.log(jsonReq.data)
+			display(jsonReq.data)
+		})
+		function display(employee){
+			var block=document.getElementById("emp")
+			for(s=0;s<employee.length;s++){
+				block.innerHTML+=`
+				<div>
+					<p>${employee[s].id}</p>
+					<p>${employee[s].first_name}</p>
+					<img src="${employee[s].avatar}" width="35%"/>
+					<p>${employee[s].email}</p>
+					<p>${employee[s].last_name}</p>
+				</div>`
+			}
+		}
+	</script>
+
+</body>
+</html>
